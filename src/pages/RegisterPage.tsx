@@ -4,8 +4,9 @@ import { ChevronLeft, UserPlus } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
 const hostels = [
-  'Livingstone Hall', 'Blantyre Hall', 'Zomba Hall',
-  'Mangochi Hall', 'Dedza Hall', 'Off-Campus',
+  'Mpingwe', 'Ndirande A', 'Nyika A', 'Nyika B',
+  'Kapeni A', 'Kapeni B', 'Ndirande B', 'Hyrid',
+  'Off-Campus',
 ];
 
 export default function RegisterPage() {
