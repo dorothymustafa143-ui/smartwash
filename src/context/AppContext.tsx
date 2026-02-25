@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { User, Order, Feedback, TimeSlot } from '../types';
+import { User, Order, Feedback, TimeSlot, PaymentMethod } from '../types';
 import { mockOrders, mockUsers, mockFeedback, mockTimeSlots, SERVICE_PRICES, DELIVERY_CHARGE, PLATFORM_FEE_PERCENTAGE } from '../data/mockData';
 
 export interface ToastType {
@@ -28,7 +28,7 @@ interface AppContextType {
   showToast: (message: string, type?: ToastType['type']) => void;
   removeToast: (id: string) => void;
   calculateOrderPrice: (serviceType: string, deliveryType: string) => number;
-  processPayment: (orderId: string, method: Order['payment']['method']) => boolean;
+  processPayment: (orderId: string, method: PaymentMethod) => boolean;
   getTotalPlatformRevenue: () => number;
   getTotalOrders: () => number;
   getTotalAdminEarnings: () => number;
